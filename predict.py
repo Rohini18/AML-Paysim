@@ -39,7 +39,7 @@ y = dataframe[predict]
 X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     test_size=test_size,
                                                     random_state=random_state)
-
+'''
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_train = pd.DataFrame(scaler.fit_transform(X_train), columns=X_train.columns)
@@ -52,7 +52,7 @@ X_train = pd.DataFrame(scaler.fit_transform(X_train), columns=X_train.columns)
 X_test = pd.DataFrame(scaler.transform(X_test), columns=X_train.columns)
 '''
 
-'''
+
 from sklearn.linear_model import LinearRegression
 print("\nTraining using Linear Regression model")
 Model = LinearRegression()
@@ -67,7 +67,7 @@ Model.fit(X_train, y_train)
 print("Accuracy of Training set data : ",round(Model.score(X_train,y_train)*100,3),"%")
 print("Accuracy of Testing set data  : ",round(Model.score(X_test,y_test)*100,3),"%")
 
-
+'''
 from sklearn.linear_model import LogisticRegressionCV
 print("\nTraining using Logistic Regression CV model")
 Model = LogisticRegressionCV()
@@ -145,6 +145,6 @@ Model = XGBClassifier(n_estimators=1000, learning_rate=1)
 Model.fit(X_train, y_train)
 print("Accuracy of Training set data : ",round(Model.score(X_train,y_train)*100,3),"%")
 print("Accuracy of Testing set data  : ",round(Model.score(X_test,y_test)*100,3),"%")
-
+'''
 
 
